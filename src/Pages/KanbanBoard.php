@@ -2,7 +2,7 @@
 
 namespace Mokhosh\FilamentKanban\Pages;
 
-use Filament\Pages\Page;
+use Filament\Resources\Pages\Page;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Collection;
 use Mokhosh\FilamentKanban\Concerns\HasEditRecordModal;
