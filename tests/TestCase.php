@@ -1,6 +1,6 @@
 <?php
 
-namespace Mokhosh\FilamentKanban\Tests;
+namespace Dowhile\FilamentKanban\Tests;
 
 use BladeUI\Heroicons\BladeHeroiconsServiceProvider;
 use BladeUI\Icons\BladeIconsServiceProvider;
@@ -15,9 +15,9 @@ use Filament\Widgets\WidgetsServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Schema\Blueprint;
 use Livewire\LivewireServiceProvider;
-use Mokhosh\FilamentKanban\FilamentKanbanServiceProvider;
-use Mokhosh\FilamentKanban\Tests\Models\User;
-use Mokhosh\FilamentKanban\Tests\Providers\TestPanelProvider;
+use Dowhile\FilamentKanban\FilamentKanbanServiceProvider;
+use Dowhile\FilamentKanban\Tests\Models\User;
+use Dowhile\FilamentKanban\Tests\Providers\TestPanelProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 use RyanChandler\BladeCaptureDirective\BladeCaptureDirectiveServiceProvider;
 

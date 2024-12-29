@@ -1,12 +1,12 @@
 <?php
 
-namespace Mokhosh\FilamentKanban\Pages;
+namespace Dowhile\FilamentKanban\Pages;
 
 use Filament\Resources\Pages\Page;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Collection;
-use Mokhosh\FilamentKanban\Concerns\HasEditRecordModal;
-use Mokhosh\FilamentKanban\Concerns\HasStatusChange;
+use Dowhile\FilamentKanban\Concerns\HasEditRecordModal;
+use Dowhile\FilamentKanban\Concerns\HasStatusChange;
 use UnitEnum;
 
 class KanbanBoard extends Page

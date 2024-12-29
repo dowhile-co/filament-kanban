@@ -1,6 +1,6 @@
 <?php
 
-namespace Mokhosh\FilamentKanban\Commands;
+namespace Dowhile\FilamentKanban\Commands;
 
 use Illuminate\Console\GeneratorCommand;
 

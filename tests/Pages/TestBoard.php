@@ -1,12 +1,12 @@
 <?php
 
-namespace Mokhosh\FilamentKanban\Tests\Pages;
+namespace Dowhile\FilamentKanban\Tests\Pages;
 
 use Filament\Forms;
-use Mokhosh\FilamentKanban\Pages\KanbanBoard;
-use Mokhosh\FilamentKanban\Tests\Enums\TaskStatus;
-use Mokhosh\FilamentKanban\Tests\Models\Task;
-use Mokhosh\FilamentKanban\Tests\Models\User;
+use Dowhile\FilamentKanban\Pages\KanbanBoard;
+use Dowhile\FilamentKanban\Tests\Enums\TaskStatus;
+use Dowhile\FilamentKanban\Tests\Models\Task;
+use Dowhile\FilamentKanban\Tests\Models\User;
 
 class TestBoard extends KanbanBoard
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Mokhosh\FilamentKanban\Tests\Enums;
+namespace Dowhile\FilamentKanban\Tests\Enums;
 
-use Mokhosh\FilamentKanban\Concerns\IsKanbanStatus;
+use Dowhile\FilamentKanban\Concerns\IsKanbanStatus;
 
 enum TaskStatus: string
 {
