@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\File;
 use Mokhosh\FilamentKanban\Tests\Enums\TaskStatus;
 use Mokhosh\FilamentKanban\Tests\Models\Task;
 use Mokhosh\FilamentKanban\Tests\Pages\TestBoard;
@@ -9,6 +10,7 @@ use function Pest\Laravel\actingAs;
 use function Pest\Livewire\livewire;
 
 it('can make kanban board from the stub', function () {
+    File::delete($this->app->basePath('app/Filament/Pages/TestBoard.php'));
     $pagesPath = $this->app->basePath('app/Filament/Pages');
 
     $this->artisan('make:kanban TestBoard')->assertExitCode(0);
@@ -16,6 +18,51 @@ it('can make kanban board from the stub', function () {
     expect($pagesPath . '/TestBoard.php')
         ->toBeFile()
         ->toContainAsFile('class TestBoard extends KanbanBoard');
+});
+
+it('can make kanban board from custom stub', function () {
+    File::delete($this->app->basePath('app/Filament/Pages/TestBoard.php'));
+    File::delete($this->app->basePath('stubs/filament-kanban/board.stub'));
+    File::ensureDirectoryExists($this->app->basePath('/stubs/filament-kanban/'));
+    File::put($this->app->basePath('/stubs/filament-kanban/board.stub'), 'custom stub');
+
+    $pagesPath = $this->app->basePath('app/Filament/Pages');
+
+    $this->artisan('make:kanban TestBoard')->assertExitCode(0);
+
+    expect($pagesPath . '/TestBoard.php')
+        ->toBeFile()
+        ->toContainAsFile('custom stub');
+});
+
+it('can make force recreate kanban board ', function () {
+    File::delete($this->app->basePath('app/Filament/Pages/TestBoard.php'));
+    File::delete($this->app->basePath('stubs/filament-kanban/board.stub'));
+    $pagesPath = $this->app->basePath('app/Filament/Pages');
+
+    $this->artisan('make:kanban TestBoard')->assertExitCode(0);
+
+    expect($pagesPath . '/TestBoard.php')
+        ->toBeFile()
+        ->toContainAsFile('class TestBoard extends KanbanBoard');
+
+    File::ensureDirectoryExists($this->app->basePath('/stubs/filament-kanban/'));
+    File::put($this->app->basePath('/stubs/filament-kanban/board.stub'), 'custom stub');
+
+    $this->artisan('make:kanban TestBoard')->assertExitCode(0);
+
+    expect($pagesPath . '/TestBoard.php')
+        ->toBeFile()
+        ->not->toContainAsFile('custom stub');
+
+    $this->artisan('make:kanban', [
+        'name' => 'TestBoard',
+        '--force' => true,
+    ])->assertExitCode(0);
+
+    expect($pagesPath . '/TestBoard.php')
+        ->toBeFile()
+        ->toContainAsFile('custom stub');
 });
 
 it('loads statuses', function () {

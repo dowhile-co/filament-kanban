@@ -6,7 +6,7 @@ use Illuminate\Console\GeneratorCommand;
 
 class MakeKanbanBoardCommand extends GeneratorCommand
 {
-    public $name = 'make:kanban';
+    protected $signature = 'make:kanban {name} {--force : Force kanban board to recreated}';
 
     public $description = 'Create a filament kanban board page';
 
@@ -14,7 +14,9 @@ class MakeKanbanBoardCommand extends GeneratorCommand
 
     protected function getStub()
     {
-        return __DIR__ . '/../../stubs/board.stub';
+        return file_exists($customPath = $this->laravel->basePath('/stubs/filament-kanban/board.stub'))
+            ? $customPath
+            : __DIR__ . '/../../stubs/board.stub';
     }
 
     protected function getDefaultNamespace($rootNamespace)
