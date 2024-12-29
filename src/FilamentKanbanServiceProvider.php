@@ -1,14 +1,14 @@
 <?php
 
-namespace Mokhosh\FilamentKanban;
+namespace Dowhile\FilamentKanban;
 
 use Filament\Support\Assets\Asset;
 use Filament\Support\Assets\Css;
 use Filament\Support\Facades\FilamentAsset;
 use Illuminate\Filesystem\Filesystem;
 use Livewire\Features\SupportTesting\Testable;
-use Mokhosh\FilamentKanban\Commands\MakeKanbanBoardCommand;
-use Mokhosh\FilamentKanban\Testing\TestsFilamentKanban;
+use Dowhile\FilamentKanban\Commands\MakeKanbanBoardCommand;
+use Dowhile\FilamentKanban\Testing\TestsFilamentKanban;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
@@ -27,7 +27,7 @@ class FilamentKanbanServiceProvider extends PackageServiceProvider
             ->hasInstallCommand(function (InstallCommand $command) {
                 $command
                     ->publishAssets()
-                    ->askToStarRepoOnGitHub('mokhosh/filament-kanban');
+                    ->askToStarRepoOnGitHub('dowhile-co/filament-kanban');
             });
 
         if (file_exists($package->basePath('/../resources/views'))) {
@@ -58,7 +58,7 @@ class FilamentKanbanServiceProvider extends PackageServiceProvider
 
     protected function getAssetPackageName(): ?string
     {
-        return 'mokhosh/filament-kanban';
+        return 'dowhile/filament-kanban';
     }
 
     /**

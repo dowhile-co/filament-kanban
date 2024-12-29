@@ -1,10 +1,10 @@
 <?php
 
-namespace Mokhosh\FilamentKanban\Tests\Factories;
+namespace Dowhile\FilamentKanban\Tests\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Mokhosh\FilamentKanban\Tests\Enums\TaskStatus;
-use Mokhosh\FilamentKanban\Tests\Models\UlidTask;
+use Dowhile\FilamentKanban\Tests\Enums\TaskStatus;
+use Dowhile\FilamentKanban\Tests\Models\UlidTask;
 
 class UlidTaskFactory extends Factory
 {

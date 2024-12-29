@@ -136,7 +136,7 @@ use App\Models\User;
 use Filament\Forms\Components\TextInput;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
-use Mokhosh\FilamentKanban\Pages\KanbanBoard;
+use Dowhile\FilamentKanban\Pages\KanbanBoard;
 
 class UserDashboard extends KanbanBoard
 {
@@ -209,7 +209,7 @@ Now you can have just this:
 ```php
 use App\Enums\UserStatus;
 use App\Models\User;
-use Mokhosh\FilamentKanban\Pages\KanbanBoard;
+use Dowhile\FilamentKanban\Pages\KanbanBoard;
 
 class UserDashboard extends KanbanBoard
 {
@@ -251,7 +251,7 @@ use App\Models\User;
 use Filament\Forms\Components\TextInput;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
-use Mokhosh\FilamentKanban\Pages\KanbanBoard;
+use Dowhile\FilamentKanban\Pages\KanbanBoard;
 
 class UserDashboard extends KanbanBoard
 {
@@ -325,7 +325,7 @@ Now you can have just this:
 ```php
 use App\Enums\UserStatus;
 use App\Models\User;
-use Mokhosh\FilamentKanban\Pages\KanbanBoard;
+use Dowhile\FilamentKanban\Pages\KanbanBoard;
 
 class UserDashboard extends KanbanBoard
 {

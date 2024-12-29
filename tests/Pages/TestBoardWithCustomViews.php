@@ -1,11 +1,11 @@
 <?php
 
-namespace Mokhosh\FilamentKanban\Tests\Pages;
+namespace Dowhile\FilamentKanban\Tests\Pages;
 
 use Filament\Forms\Components\TextInput;
-use Mokhosh\FilamentKanban\Pages\KanbanBoard;
-use Mokhosh\FilamentKanban\Tests\Enums\TaskStatus;
-use Mokhosh\FilamentKanban\Tests\Models\Task;
+use Dowhile\FilamentKanban\Pages\KanbanBoard;
+use Dowhile\FilamentKanban\Tests\Enums\TaskStatus;
+use Dowhile\FilamentKanban\Tests\Models\Task;
 
 class TestBoardWithCustomViews extends KanbanBoard
 {
